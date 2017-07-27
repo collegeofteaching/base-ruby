@@ -13,7 +13,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 # Install Our Application Deps
 RUN apt-get update && apt-get install -y postgresql-client libpq-dev sqlite3 libsqlite3-dev yarn nodejs fontconfig imagemagick
 
-RUN npm install phantomjs-prebuilt
+RUN npm install -g phantomjs-prebuilt
 
 ENV app /app
 RUN mkdir $app
