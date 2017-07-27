@@ -13,10 +13,7 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 # Install Our Application Deps
 RUN apt-get update && apt-get install -y postgresql-client libpq-dev sqlite3 libsqlite3-dev yarn nodejs fontconfig imagemagick
 
-# PhantomJS requires fontconfig package
-ENV PHANTOMJS_VERSION 2.1.1
-RUN wget --no-check-certificate -q -O - https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 | tar xjC /opt
-RUN ln -s /opt/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
+RUN npm install phantomjs-prebuilt
 
 ENV app /app
 RUN mkdir $app
