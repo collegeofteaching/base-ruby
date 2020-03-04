@@ -19,5 +19,6 @@ ENV app /app
 RUN mkdir $app
 WORKDIR $app
 
+RUN gem install bundler:1.15.4
 CMD bundle exec puma -p 3000 -C config/puma.rb
 EXPOSE 3000
