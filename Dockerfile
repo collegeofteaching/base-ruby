@@ -1,4 +1,4 @@
-FROM ruby:2.4.1-slim
+FROM ruby:2.7.0-slim
 
 # Install basic packages
 RUN apt-get update && apt-get install -y apt-utils curl apt-transport-https build-essential git wget
