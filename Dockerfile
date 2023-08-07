@@ -19,6 +19,6 @@ RUN corepack enable
 RUN yarn set version stable
 RUN npm install
 
-RUN gem install bundler:2.4.10
+RUN gem install bundler:2.4.18
 CMD bundle exec puma -p 3000 -C config/puma.rb
 EXPOSE 3000
