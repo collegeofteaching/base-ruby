@@ -1,4 +1,4 @@
-FROM ruby:3.2.2-slim
+FROM ruby:3.0.6-slim
 
 # Install basic packages
 RUN apt-get update && apt-get install -y apt-utils curl apt-transport-https build-essential git wget
